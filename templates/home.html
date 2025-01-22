@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Data Input</title>
+</head>
+<body>
+
+    <h1>California House Price Prediction</h1>
+
+    <h1>Real Estate Data Input</h1>
+
+
+    <form action="{{url_for('predict')}}" method="POST">
+        <label for="MedInc">Median Income (MedInc):</label><br>
+        <input type="number" id="MedInc" name="MedInc" step="any" required><br><br>
+
+        <label for="HouseAge">House Age (HouseAge):</label><br>
+        <input type="number" id="HouseAge" name="HouseAge" required><br><br>
+
+        <label for="AveRooms">Average Rooms (AveRooms):</label><br>
+        <input type="number" id="AveRooms" name="AveRooms" required><br><br>
+
+        <label for="AveBedrms">Average Bedrooms (AveBedrms):</label><br>
+        <input type="number" id="AveBedrms" name="AveBedrms" required><br><br>
+
+        <label for="Population">Population (Population):</label><br>
+        <input type="number" id="Population" name="Population" required><br><br>
+
+        <label for="AveOccup">Average Occupants (AveOccup):</label><br>
+        <input type="number" id="AveOccup" name="AveOccup" step="any" required><br><br>
+
+        <label for="Latitude">Latitude (Latitude):</label><br>
+        <input type="number" id="Latitude" name="Latitude" step="any" required><br><br>
+
+        <label for="Longitude">Longitude (Longitude):</label><br>
+        <input type="number" id="Longitude" name="Longitude" step="any" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Predicted Price is {{results}} </h2>
+
+
+</body>
+</html>
